@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Trade Assurance Alibaba.com - Dành Cho Nhà Bán Hàng</title>
+  <style>
+    :root {
+      --primary: #ff6a00;
+      --primary-hover: #e65100;
+      --primary-light: #fff4eb;
+      --navy: #0f2744;
+      --navy-light: #1e3a5f;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success-bg: #ecfdf5;
+      --success-text: #065f46;
+      --danger-bg: #fef2f2;
+      --danger-text: #991b1b;
+      --shadow: 0 4px 12px rgba(15, 39, 68, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header-card {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(15, 39, 68, 0.15);
+    }
+
+    .header-card::after {
+      content: "Alibaba.com";
+      position: absolute;
+      right: -20px;
+      bottom: -15px;
+      font-size: 70px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+
+    .badge-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .badge-sub {
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .header-title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .header-desc {
+      font-size: 16px;
+      color: #e2e8f0;
+      max-width: 700px;
+    }
+
+    /* Section General */
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 32px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 22px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    /* 4 Pillars Grid */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #cbd5e1;
+    }
+
+    .card-icon-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .card-body {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* Stepper Workflow */
+    .stepper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .stepper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .step-badge {
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 800;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .step-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .step-text {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* FAQ List */
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .faq-tag {
+      background: var(--primary-light);
+      color: var(--primary-hover);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      font-size: 14.5px;
+      color: #334155;
+      padding-left: 38px;
+      line-height: 1.55;
+    }
+
+    .tag-free {
+      background: var(--success-bg);
+      color: var(--success-text);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: inline-block;
+    }
+
+    .tag-risk {
+      background: var(--danger-bg);
+      color: var(--danger-text);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: inline-block;
+    }
+
+    /* Golden Box */
+    .golden-box {
+      margin-top: 24px;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 2px solid #fde68a;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .golden-header {
+      font-size: 18px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .golden-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .golden-item {
+      background: #ffffff;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .golden-item-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #78350f;
+      margin-bottom: 4px;
+    }
+
+    .golden-item-desc {
+      font-size: 13px;
+      color: #92400e;
+      line-height: 1.4;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .header-card {
+        box-shadow: none;
+        background: #0f2744 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .card, .step-card, .faq-item, .golden-box {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header-card">
+      <div class="badge-bar">
+        <span class="badge">Alibaba.com</span>
+        <span class="badge-sub">Trade Assurance Quick Guide</span>
+      </div>
+      <h1 class="header-title">Thanh Toán Đảm Bảo (Trade Assurance)</h1>
+      <p class="header-desc">Bảo vệ giao dịch B2B toàn cầu — An tâm chốt đơn và bảo toàn dòng tiền cho Doanh nghiệp Việt Nam.</p>
+    </header>
+
+    <!-- Section 1: 4 Pillars -->
+    <h2 class="section-title">4 Quyền Lợi Cốt Lõi Cho Nhà Bán</h2>
+    <div class="grid-2x2">
+      <div class="card">
+        <div class="card-icon-head">
+          <div class="icon-box">🤝</div>
+          <div class="card-title">Tăng Niềm Tin & Chốt Đơn</div>
+        </div>
+        <div class="card-body">
+          Người mua quốc tế sẵn sàng thanh toán cho đơn hàng đầu tiên nhờ cơ chế ký quỹ trung gian của Alibaba.com.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon-head">
+          <div class="icon-box">🔒</div>
+          <div class="card-title">Đảm Bảo Dòng Tiền</div>
+        </div>
+        <div class="card-body">
+          Hỗ trợ đa dạng phương thức (T/T, Thẻ, E-Wallet). Tiền thanh toán của người mua được bảo lưu an toàn 100%.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon-head">
+          <div class="icon-box">⚖️</div>
+          <div class="card-title">Trọng Tài Trực Tuyến</div>
+        </div>
+        <div class="card-body">
+          Alibaba.com đứng ra phân xử tranh chấp trực tuyến nhanh chóng, loại bỏ hoàn toàn các rắc rối pháp lý quốc tế.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon-head">
+          <div class="icon-box">🛡️</div>
+          <div class="card-title">Quản Lý Rủi Ro Chặt Chẽ</div>
+        </div>
+        <div class="card-body">
+          Giải ngân tiền tự động khi nhà bán thực hiện đúng: đúng sản phẩm, đúng số lượng và đủ chứng từ vận chuyển.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: 4-Step Process -->
+    <h2 class="section-title">Hành Trình Đơn Hàng 4 Bước</h2>
+    <div class="stepper">
+      <div class="step-card">
+        <div class="step-badge">1</div>
+        <div class="step-name">Buyer Thanh Toán</div>
+        <div class="step-text">Người mua chọn phương thức hợp lệ và thanh toán tiền theo hợp đồng đơn hàng.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-badge">2</div>
+        <div class="step-name">Ký Quỹ An Toàn</div>
+        <div class="step-text">Alibaba.com giữ tiền an toàn trong tài khoản ký quỹ; Người bán an tâm sản xuất.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-badge">3</div>
+        <div class="step-name">Giao Hàng Đúng Hạn</div>
+        <div class="step-text">Nhà bán xuất hàng theo cam kết và lưu trữ đầy đủ bộ chứng từ vận chuyển (B/L, AWB).</div>
+      </div>
+      <div class="step-card">
+        <div class="step-badge">4</div>
+        <div class="step-name">Giải Ngân Tiền Về</div>
+        <div class="step-text">Người mua xác nhận nhận hàng hoặc hết thời hạn quy định, tiền giải ngân ngay về tài khoản.</div>
+      </div>
+    </div>
+
+    <!-- Section 3: FAQ -->
+    <h2 class="section-title">7 Câu Hỏi Thường Gặp (FAQ)</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q1</span>
+          <span>Dùng Trade Assurance có mất phí không?</span>
+        </div>
+        <div class="faq-answer">
+          <span class="tag-free">Miễn phí tham gia</span>. Nhà bán chỉ chịu phí xử lý giao dịch nhỏ tùy phương thức thanh toán của người mua; không thu hoa hồng đơn ngoài.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q2</span>
+          <span>Bao giờ tôi nhận được tiền?</span>
+        </div>
+        <div class="faq-answer">
+          Nhận tiền ngay <strong>sau khi giao hàng & Buyer xác nhận</strong> đúng điều khoản đơn. Trước đó, tiền được giữ tuyệt đối an toàn trong quỹ Alibaba.com.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q3</span>
+          <span>Buyer khiếu nại vô lý thì tôi được bảo vệ thế nào?</span>
+        </div>
+        <div class="faq-answer">
+          Alibaba.com phán quyết theo <strong>hợp đồng & bằng chứng lưu trữ</strong> (mẫu chuẩn đã duyệt, biên bản kiểm hàng QC, ảnh đóng gói, chứng từ vận chuyển).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q4</span>
+          <span>Tôi nhận chuyển khoản riêng bên ngoài cho nhanh được không?</span>
+        </div>
+        <div class="faq-answer">
+          <span class="tag-risk">Rủi ro rất cao</span>: Mất toàn bộ quyền bảo vệ ký quỹ, không có cơ chế phân xử tranh chấp và mất đi lợi thế thuyết phục buyer đặt đơn đầu tiên.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q5</span>
+          <span>Thời hạn Buyer được khiếu nại là bao lâu?</span>
+        </div>
+        <div class="faq-answer">
+          <strong>30 ngày</strong> kể từ ngày giao hàng (hoặc <strong>60 ngày</strong> đối với tài khoản Enterprise/Enterprise Pro).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q6</span>
+          <span>Đơn hàng nhỏ / đơn mẫu có dùng được không?</span>
+        </div>
+        <div class="faq-answer">
+          <span class="tag-free">Áp dụng bình thường</span> theo cùng quy trình. Đơn dưới $3.000 tại các quốc gia đủ điều kiện còn được hỗ trợ Easy Return để giảm tải rủi ro.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-tag">Q7</span>
+          <span>Tôi cần chuẩn bị gì để luôn thắng khi có tranh chấp?</span>
+        </div>
+        <div class="faq-answer">
+          Chuẩn bị sẵn <strong>3 bằng chứng then chốt</strong>: Mẫu chuẩn đã ký, Tiêu chuẩn chất lượng ghi rõ trong đơn (AQL), và Ảnh/Video đóng hàng kèm số seal.
+        </div>
+      </div>
+    </div>
+
+    <!-- Golden Box -->
+    <div class="golden-box">
+      <div class="golden-header">
+        <span>🏆 3 Yếu Tố "Bất Bại" Khi Xử Lý Tranh Chấp</span>
+      </div>
+      <p style="font-size: 14px; color: #78350f; line-height: 1.5;">
+        Chỉ cần lưu trữ đầy đủ 3 chứng cứ này trong mỗi đơn hàng, người bán luôn ở thế chủ động và được bảo vệ tối đa:
+      </p>
+      <div class="golden-grid">
+        <div class="golden-item">
+          <div class="golden-item-title">🏷️ 1. Mẫu Chuẩn Ký Duyệt</div>
+          <div class="golden-item-desc">Mẫu sản phẩm đã được 2 bên ký nhận/niêm phong làm chuẩn trước khi sản xuất hàng loạt.</div>
+        </div>
+        <div class="golden-item">
+          <div class="golden-item-title">📋 2. Tiêu Chuẩn Ghi Trong Đơn</div>
+          <div class="golden-item-desc">Ghi rõ quy cách, dung sai cho phép và tiêu chuẩn kiểm định (ví dụ: AQL 2.5) trong hợp đồng đơn.</div>
+        </div>
+        <div class="golden-item">
+          <div class="golden-item-title">📦 3. Video Đóng Hàng & Seal</div>
+          <div class="golden-item-desc">Hình ảnh/video lúc đóng hàng vào thùng, cân nặng thực tế và số niêm phong (seal) container.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
